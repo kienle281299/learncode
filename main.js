@@ -1483,47 +1483,203 @@
 //   console.log(myArray[i][j]); 
 //   }
 //  }
-let courses = [
-  {
-    id: 1,
-    name: 'Javascript',
-    coin: 250
-  },
-  {
-    id: 2,
-    name: 'HTML CSS',
-    coin: 250
-  },
-  {
-    id: 3,
-    name: 'Ruby',
-    coin: 250
-  },
-  {
-    id: 4,
-    name: 'PHP',
-    coin: 0
-  },
-  {
-    id: 5,
-    name: 'ReactJS',
-    coin: 0
-  }
+// let courses = [
+//   {
+//     id: 1,
+//     name: 'Javascript',
+//     coin: 250
+//   },
+//   {
+//     id: 2,
+//     name: 'HTML CSS',
+//     coin: 250
+//   },
+//   {
+//     id: 3,
+//     name: 'Ruby',
+//     coin: 250
+//   },
+//   {
+//     id: 4,
+//     name: 'PHP',
+//     coin: 0
+//   },
+//   {
+//     id: 5,
+//     name: 'ReactJS',
+//     coin: 0
+//   }
+// ];
 
-];
-function courseHandler(course, index){
-  // console.log(course);
-  return {
-    id: course.id,
-    name: `khoa hoc: ${course.name}`,
-    coin: course.coin,
-    coinText: `Gia: ${course.coin}`,
-    index: index,
-    originArray: courses,
-  };
-}
-let newCourses = courses.map(courseHandler);
-console.log(newCourses);
+// let depthArray = [1, 2, [3, 9], 7, 6, [7, 8, 4]];
+
+// let flatArray = depthArray.reduce(function(flatOutput, depthItem){
+//   return flatOutput.concat(depthItem);
+// }, []);
+// console.log(flatArray);
+// Trong JavaScript, concat là một phương thức được sử dụng để nối (gộp) hai hoặc nhiều mảng lại với nhau và tạo ra một mảng mới. Phương thức này không thay đổi mảng gốc, mà trả về một mảng mới chứa tất cả các phần tử từ các mảng được nối.
+
+// Cú pháp của phương thức concat như sau:
+
+// javascript
+// Copy code
+// let newArray = array1.concat(array2, array3, ..., arrayN);
+// array1: Mảng đầu tiên.
+// array2, array3, ..., arrayN: Các mảng còn lại bạn muốn nối vào mảng đầu tiên.
+// Dưới đây là một ví dụ đơn giản:
+
+// javascript
+// Copy code
+// let array1 = [1, 2, 3];
+// let array2 = [4, 5, 6];
+// let array3 = [7, 8, 9];
+
+// let resultArray = array1.concat(array2, array3);
+
+// console.log(resultArray);
+// // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// Ở đây, resultArray sẽ chứa tất cả các phần tử từ array1, array2, và array3. Phương thức concat có thể nhận nhiều đối số, không chỉ giới hạn ở hai mảng.
+
+// let numbers = [250, 250, 250, 0, 0];
+
+// let totalCoin = numbers.reduce(function(total, number){
+//   return total + number;
+// });
+// console.log(totalCoin);
+
+
+// let totalCoin = courses.reduce(function(total,course){
+//   return total + course.coin;
+// },0);
+// console.log(totalCoin);
+
+// Đoạn mã JavaScript trên thực hiện việc tính tổng số coin của tất cả các khóa học trong mảng courses bằng cách sử dụng phương thức reduce. Dưới đây là phân tích chi tiết:
+
+// Mảng courses: Là một mảng chứa các đối tượng đại diện cho các khóa học. Mỗi đối tượng có các thuộc tính như id, name, và coin (số coin).
+
+// javascript
+// Copy code
+// let courses = [
+//   { id: 1, name: 'Javascript', coin: 250 },
+//   { id: 2, name: 'HTML CSS', coin: 250 },
+//   { id: 3, name: 'Ruby', coin: 250 },
+//   { id: 4, name: 'PHP', coin: 0 },
+//   { id: 5, name: 'ReactJS', coin: 0 }
+// ];
+// Phương thức reduce: Được gọi trên mảng courses để thực hiện việc giảm mảng thành một giá trị duy nhất (trong trường hợp này là tổng số coin). Phương thức reduce nhận vào một hàm callback và một giá trị khởi đầu cho biến tích trữ (trong trường hợp này là 0).
+
+// javascript
+// Copy code
+// let totalCoin = courses.reduce(function(total, course) {
+//   return total + course.coin;
+// }, 0);
+// Hàm callback của reduce: Nhận vào hai tham số: total (biến tích trữ) và course (phần tử hiện tại của mảng). Trong hàm này, giá trị của total được cập nhật bằng cách cộng thêm giá trị coin (course.coin) của từng khóa học.
+
+// javascript
+// Copy code
+// function(total, course) {
+//   return total + course.coin;
+// }
+// Giá trị khởi đầu cho reduce: Là 0, là giá trị ban đầu của biến tích trữ (total).
+
+// javascript
+// Copy code
+// }, 0);
+// In ra tổng số coin: Sử dụng console.log để in ra tổng số coin tính được từ phương thức reduce.
+
+// javascript
+// Copy code
+// console.log(totalCoin);
+// Kết quả khi chạy đoạn mã sẽ là tổng số coin của tất cả các khóa học trong mảng, được in ra trong console.
+
+// let i = 0;
+// function coinHandler(accumulator, currentValue, currentIndex, originArray){
+//   i++;
+//   let total = accumulator + currentValue.coin;
+//   console.table({
+//     'luot chay:': i,
+//     'Biến tích trữ:': accumulator,
+//     'Giá trị khoa hoc:': currentValue.coin,
+//     'Tich tru duoc': total,
+//   });
+//   return total;
+// }
+
+// let totalCoins = courses.reduce(coinHandler, 0);
+
+// console.log("Tổng số coin của tất cả các khóa học là:", totalCoins);
+
+// let courses = [
+//   {
+//     id: 1,
+//     name: 'Javascript',
+//     coin: 250
+//   },
+//   {
+//     id: 2,
+//     name: 'HTML CSS',
+//     coin: 250
+//   },
+//   {
+//     id: 3,
+//     name: 'Ruby',
+//     coin: 250
+//   },
+//   {
+//     id: 4,
+//     name: 'PHP',
+//     coin: 0
+//   },
+//   {
+//     id: 5,
+//     name: 'ReactJS',
+//     coin: 0
+//   }
+
+// ];
+// // function courseHandler(course, index){
+// //   // console.log(course);
+// //   return {
+// //     id: course.id,
+// //     name: `khoa hoc: ${course.name}`,
+// //     coin: course.coin,
+// //     coinText: `Gia: ${course.coin}`,
+// //     index: index,
+// //     originArray: courses,
+// //   };
+  
+ 
+// // }
+// let i = 0;
+// function coinHandler(accumulator, currentValue, currentIndex, originArray){
+//   i++;
+//   // console.table({
+//   //   'luot chay:': 1,
+//   //   'BIen tich tru:': accumulator,
+//   // });
+//   return accumulator + currentValue.coin;
+// }
+// let totalCoin = courses.reduce(coinHandler, 0)
+// console.log(totalCoin);
+// let i = 0;
+// function coinHandler(accumulator, currentValue, currentIndex, originArray){
+//   i++;
+//   console.table({
+//     'luot chay:': 1,
+//     'BIen tich tru:': accumulator,
+//   });
+//   return 100;
+// }
+// let totalCoin = courses.reduce(coinHandler, 0)
+// // biến lưu trữ
+// let totalCoin = 0;
+// // lặp qua các phần tử
+// for (let course of courses){
+//   // thực hiện việc lưu trữ
+//   totalCoin += course.coin;
+// }
+// console.log(totalCoin);
+
 // courses.forEach(function(course,index){
 //   console.log(index,course);
 // });
@@ -1549,3 +1705,61 @@ console.log(newCourses);
 //   return course.coin === 0;
 // });
 // console.log(course);
+
+// let topics = [
+//   {
+//     topic: "Front-end",
+//     course: [
+//       {
+//         id: 1,
+//         title:"HTML, CSS"
+//       },
+//       {
+//         id: 2,
+//         title: "JS"
+//       }
+//     ]
+//   },
+//   {
+//     topic: "Back-end",
+//     course: [
+//       {
+//         id: 1,
+//         title: "NodeJS"
+//       },
+//       {
+//         id: 2,
+//         title: "PHP"
+//       }
+//     ]
+//   }
+// ];
+// let newCourses = topics.reduce(function(courses, topic){
+//   return courses.concat(topic.course)
+// },[]);
+// console.log(newCourses);
+var title = 'responsive web desgin';
+
+console.log(title.includes('responsive'));
+
+let course = ['javascript', 'PHP', 'C++'];
+console.log(course.includes('javascript', 0));
+// 3 + -1
+console.log(course.includes('javascript', -1));
+// 3 + -4 < 0 thi mac dinh la 0 ==> true
+console.log(course.includes('javascript', -4));
+// PI
+console.log(Math.PI);
+// làm tròn số round
+console.log(Math.round(1.3));
+console.log(Math.round(1.8));
+// giá trị tuyệt đối
+console.log(Math.abs(-4));
+// làm tròn trên Math
+console.log(Math.ceil(4.1));
+// làm tròn dưới
+console.log(Math.floor(4.9999));
+// trả về số thập phân nhỏ hơn 1 vi tep rong
+console.log(Math.random());
+let random = Math.floor(Math.random()*100);
+//
