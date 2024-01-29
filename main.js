@@ -1,4 +1,115 @@
+// Trong JavaScript, map() là một phương thức của mảng (Array) được sử dụng để tạo ra một mảng mới bằng cách thực hiện một hàm callback trên từng phần tử của mảng gọi đến.
 
+// Cú pháp của phương thức map như sau:
+
+// javascript
+// Copy code
+// let newArray = array.map(function(currentValue, index, array) {
+//   // Trả về giá trị mới cho mảng mới
+// });
+// currentValue: Giá trị của phần tử hiện tại.
+// index: Chỉ số của phần tử hiện tại.
+// array: Mảng gốc mà map được gọi.
+// Hàm callback này sẽ được gọi cho mỗi phần tử của mảng, và giá trị trả về từ hàm callback sẽ được sử dụng để tạo ra phần tử mới trong mảng kết quả.
+
+// Ví dụ:
+
+// javascript
+// Copy code
+// let numbers = [1, 2, 3, 4, 5];
+
+// let squaredNumbers = numbers.map(function(number) {
+//   return number * number;
+// });
+
+// console.log(squaredNumbers);
+// // Output: [1, 4, 9, 16, 25]
+// Trong ví dụ trên, map được sử dụng để tạo ra một mảng mới (squaredNumbers) bằng cách lấy bình phương của mỗi số trong mảng numbers.
+
+
+// Dấu ' ' trong mã JavaScript là cách để định nghĩa một chuỗi (string). Trong JavaScript, chuỗi có thể được định nghĩa bằng cách sử dụng dấu ' ' hoặc " ". Cả hai cách này đều giúp định nghĩa một chuỗi với các ký tự được bao quanh bởi dấu nháy đơn hoặc nháy kép.
+
+// Ví dụ về cách sử dụng dấu ' ':
+
+// javascript
+// Copy code
+// let myString = 'Đây là một chuỗi.';
+// Và cách sử dụng dấu " ":
+
+// javascript
+// Copy code
+// let anotherString = "Đây cũng là một chuỗi.";
+// Cả hai cách trên đều sẽ tạo ra một biến có tên là myString và anotherString là chuỗi chứa các ký tự trong dấu nháy đơn hoặc nháy kép.
+
+// Lựa chọn giữa dấu nháy đơn và nháy kép thường phụ thuộc vào sở thích cá nhân hoặc quy ước của dự án. Trong JavaScript, không có sự khác biệt giữa việc sử dụng dấu nháy đơn hoặc nháy kép để định nghĩa chuỗi.
+
+// Dấu ' ' trong mã JavaScript là cách để định nghĩa một chuỗi (string). Trong JavaScript, chuỗi có thể được định nghĩa bằng cách sử dụng dấu ' ' hoặc " ". Cả hai cách này đều giúp định nghĩa một chuỗi với các ký tự được bao quanh bởi dấu nháy đơn hoặc nháy kép.
+
+// Ví dụ về cách sử dụng dấu ' ':
+
+// javascript
+// Copy code
+// let myString = 'Đây là một chuỗi.';
+// Và cách sử dụng dấu " ":
+
+// javascript
+// Copy code
+// let anotherString = "Đây cũng là một chuỗi.";
+// Cả hai cách trên đều sẽ tạo ra một biến có tên là myString và anotherString là chuỗi chứa các ký tự trong dấu nháy đơn hoặc nháy kép.
+
+// Lựa chọn giữa dấu nháy đơn và nháy kép thường phụ thuộc vào sở thích cá nhân hoặc quy ước của dự án. Trong JavaScript, không có sự khác biệt giữa việc sử dụng dấu nháy đơn hoặc nháy kép để định nghĩa chuỗi.
+
+// Trong đoạn code bạn đưa ra, có một hàm myFunction nhận một tham số là một hàm (param). Sau đó, hàm myFunction được gọi với một đối số là hàm myCallback. Dưới đây là phân tích chi tiết:
+
+// Hàm myFunction:
+
+// javascript
+// Copy code
+// function myFunction(param) {
+//   param('chuc mung ban');
+// }
+// Hàm myFunction nhận một tham số là param, là một hàm.
+// Trong thân hàm, hàm param được gọi với đối số là chuỗi 'chuc mung ban'.
+// Hàm myCallback:
+
+// javascript
+// Copy code
+// function myCallback(value) {
+//   console.log('value:', value);
+// }
+// Hàm myCallback nhận một tham số value và in giá trị của value ra console.
+// Gọi myFunction với myCallback làm đối số:
+
+// javascript
+// Copy code
+// myFunction(myCallback);
+// Hàm myFunction được gọi với đối số là hàm myCallback.
+// Trong quá trình thực thi, hàm myCallback được gọi thông qua việc thực hiện param('chuc mung ban').
+// Kết quả khi chạy:
+
+// makefile
+// Copy code
+// value: chuc mung ban
+// Khi hàm myCallback được gọi thông qua param('chuc mung ban'), nó in ra giá trị 'chuc mung ban' ra console.
+// Trong ngôn ngữ lập trình JavaScript, dấu hai dấu nháy ngược (``) được gọi là "template literals" hoặc "template strings". Template literals là một cú pháp đặc biệt để tạo chuỗi và cho phép bạn nhúng biểu thức JavaScript vào trong chuỗi một cách thuận tiện.
+
+// Ví dụ:
+
+// javascript
+// Copy code
+// const name = "John";
+// const age = 30;
+
+// // Sử dụng template literals
+// const message = `Xin chào, tôi là ${name} và tôi ${age} tuổi.`;
+
+// console.log(message);
+// Kết quả sẽ là:
+
+// css
+// Copy code
+// Xin chào, tôi là John và tôi 30 tuổi.
+// Trong ví dụ này, ${name} và ${age} là các biểu thức JavaScript nhúng vào chuỗi thông qua template literals. Dấu hai dấu nháy ngược giúp làm cho việc này trở nên thuận tiện hơn so với việc sử dụng chuỗi thông thường và cộng chuỗi bằng cách sử dụng dấu cộng (+).
 // document.getElementById("content").innerHTML =
 //   "Tài liệu học Javascript toàn tập";
 //   console.log("hello");
@@ -1738,28 +1849,222 @@
 //   return courses.concat(topic.course)
 // },[]);
 // console.log(newCourses);
-var title = 'responsive web desgin';
+// var title = 'responsive web desgin';
 
-console.log(title.includes('responsive'));
+// console.log(title.includes('responsive'));
 
-let course = ['javascript', 'PHP', 'C++'];
-console.log(course.includes('javascript', 0));
-// 3 + -1
-console.log(course.includes('javascript', -1));
-// 3 + -4 < 0 thi mac dinh la 0 ==> true
-console.log(course.includes('javascript', -4));
-// PI
-console.log(Math.PI);
-// làm tròn số round
-console.log(Math.round(1.3));
-console.log(Math.round(1.8));
-// giá trị tuyệt đối
-console.log(Math.abs(-4));
-// làm tròn trên Math
-console.log(Math.ceil(4.1));
-// làm tròn dưới
-console.log(Math.floor(4.9999));
-// trả về số thập phân nhỏ hơn 1 vi tep rong
-console.log(Math.random());
-let random = Math.floor(Math.random()*100);
-//
+// let course = ['javascript', 'PHP', 'C++'];
+// console.log(course.includes('javascript', 0));
+// // 3 + -1
+// console.log(course.includes('javascript', -1));
+// // 3 + -4 < 0 thi mac dinh la 0 ==> true
+// console.log(course.includes('javascript', -4));
+// // PI
+// console.log(Math.PI);
+// // làm tròn số round
+// console.log(Math.round(1.3));
+// console.log(Math.round(1.8));
+// // giá trị tuyệt đối
+// console.log(Math.abs(-4));
+// // làm tròn trên Math
+// console.log(Math.ceil(4.1));
+// // làm tròn dưới
+// console.log(Math.floor(4.9999));
+// trả về số thập phân nhỏ hơn 1
+// console.log(Math.random());
+// let random = Math.floor(Math.random()*10);
+console.log(Math.floor(Math.random()*100));
+// random phần thưởng
+// let random = Math.floor(Math.random()*5)
+
+// let bonus = ['10', '20', '30', '40', '50',];
+
+// console.log(bonus[random])
+////////////////
+//  let random = Math.floor(Math.random()*100);
+//  console.log(random);
+
+//  if(random < 5){
+//   console.log("Chuc mung ban da thanh cong");
+//  }
+// // lấy số nhỏ nhất
+// console.log(Math.min(-100,20,30,50));
+// //  lấy số lớn nhất
+// console.log(Math.max(-100,20,30,50));
+///////////
+// typeof kiem tra tinnh chat
+// function myFuntion(param){
+//   console.log(typeof param);
+
+// }
+// myFuntion(123);
+
+// Callback
+// là hàm (funcition)được truyền qua đối số
+// khi gọi hàm khác
+//1. là hàm
+//2. Được truyền qua đối số 
+// function myFunction(param){
+//   if(typeof param === 'function'){
+//     param('chuc mung ban');
+
+//   }
+
+// }
+
+// function myCallback(value){
+//   console.log('value:', value);
+// }
+// myFunction(myCallback)
+
+// Array.prototype.map2= function(callback){
+//   let arrayLength = this.length;
+//   for(let i = 0; i < arrayLength; i++){
+//     callback(this[i], i);
+//   }
+// }
+// let courses = [
+//   'javascript',
+//   'PHP',
+//   'C++',
+// ];
+// courses.map2(function(course, index){
+//   console.log(index, course);
+// });
+// courses.map(function(course){
+//   console.log(course)
+// })
+// let htmls = courses.map(function(course){
+//   return `<h2>${course}<h2>`;
+// })
+// console.log(htmls.join(''));
+// Đoạn mã JavaScript trên mở rộng chức năng của Array.prototype bằng cách thêm một phương thức tùy chọn có tên là map2. Phương thức này tương tự như phương thức map có sẵn của JavaScript, nhưng được triển khai tùy chỉnh. Dưới đây là phân tích chi tiết:
+
+// Định nghĩa phương thức map2:
+
+// javascript
+// Copy code
+// Array.prototype.map2 = function(callback) {
+//   let arrayLength = this.length;
+//   for (let i = 0; i < arrayLength; i++) {
+//     callback(this[i], i);
+//   }
+// };
+// Array.prototype.map2: Mở rộng Array.prototype để thêm một phương thức mới có tên là map2.
+// callback: Một hàm callback sẽ được gọi cho mỗi phần tử trong mảng, nhận vào phần tử và chỉ số của phần tử đó.
+// Khởi tạo mảng courses:
+
+// javascript
+// Copy code
+// let courses = [
+//   'javascript',
+//   'PHP',
+//   'C++',
+// ];
+// Mảng courses chứa các chuỗi đại diện cho các khóa học.
+
+// Gọi phương thức map2 với hàm callback:
+
+// javascript
+// Copy code
+// courses.map2(function(course, index) {
+//   console.log(index, course);
+// });
+// Phương thức map2 được gọi trên mảng courses.
+// Mỗi phần tử của courses sẽ được truyền vào hàm callback cùng với chỉ số của nó.
+// Trong hàm callback, console.log được sử dụng để in ra chỉ số và giá trị của từng phần tử.
+// Kết quả in ra console:
+
+// arduino
+// Copy code
+// 0 'javascript'
+// 1 'PHP'
+// 2 'C++'
+// Mỗi phần tử của mảng courses được in ra console với chỉ số của nó. Phương thức map2 hoạt động tương tự như map thông thường, duyệt qua từng phần tử và gọi hàm callback cho mỗi phần tử đó.
+
+
+// Dưới đây là phân tích chi tiết chức năng của từng dòng code trong đoạn mã:
+
+// Array.prototype.map2 = function(callback) {
+
+// Mở rộng Array.prototype để thêm một phương thức mới có tên là map2.
+// callback: Tham số của phương thức, là một hàm callback sẽ được gọi cho mỗi phần tử trong mảng.
+// let arrayLength = this.length;
+
+// Lấy độ dài của mảng gọi phương thức thông qua this.length.
+// Gán giá trị này cho biến arrayLength để giảm số lần gọi length trong vòng lặp.
+// for (let i = 0; i < arrayLength; i++) {
+
+// Bắt đầu vòng lặp for với biến đếm i được khởi tạo bằng 0.
+// Vòng lặp sẽ tiếp tục cho đến khi i đạt đến arrayLength.
+// callback(this[i], i);
+
+// Gọi hàm callback (callback) với hai đối số:
+// this[i]: Phần tử hiện tại của mảng.
+// i: Chỉ số của phần tử hiện tại.
+// Hàm callback này được truyền vào mảng thông qua phương thức map2.
+// };
+
+// Kết thúc phần thân của phương thức map2.
+// Tóm lại, phương thức map2 được thêm vào Array.prototype để tạo ra một cách tùy chỉnh để duyệt qua mảng và gọi một hàm callback cho mỗi phần tử của mảng. Mỗi phần tử và chỉ số của nó được truyền vào hàm callback để thực hiện các xử lý tùy chỉnh trên từng phần tử của mảng.
+
+// Callback trong javascript là một hàm được truyền vào như là một đối số cho một hàm khác, và nó được gọi sau khi hoàn thành một nhiệm vụ
+// nào đó, thường là sau khi một hoạt động bất đồng bộ(áynchronous operation) kết thúc. Callback thường được sử dụng để đảm bảo
+// thứ tự thực hiện các công việc trong trường hợp bất đồng bộ.
+// Dưới đây là 1 số khái niệm quan trọng liên quan đến callback trong javascript:
+// 1. Hàm CallBack:
+
+// . Là 1 hàm được truyền vào là tham số cho môe=tj hàm khác.
+// . Thường được sử dụng để xử lý kết quả của một hoạt động bất đồng bộ hoặc để thực hiện các công việc sau khi một nhiệm vụ
+
+// Hoạt Động Bất Đồng Bộ (Asynchronous Operation):
+
+// Là các hoạt động không chờ đợi kết quả trực tiếp và tiếp tục thực hiện các công việc khác trong khi hoạt động đó đang thực hiện.
+// Ví dụ: Gọi API, đọc dữ liệu từ file, thực hiện setTimeout, ...
+// Callback Hell (Pyramid of Doom):
+
+// Là tình trạng khi sử dụng nhiều callback lồng nhau, tạo ra một cấu trúc rối và khó hiểu.
+// Để giảm thiểu callback hell, có thể sử dụng các kỹ thuật như Promises hoặc Async/Await.
+// Callback Function vs. Higher-Order Function:
+
+// Callback function là một hàm được truyền vào một hàm khác để thực hiện một công việc cụ thể.
+// Higher-order function là một hàm có thể nhận một hàm khác như là một đối số hoặc trả về một hàm khác.
+// Ví dụ về Callback:
+
+// javascript
+// Copy code
+// // Hàm nhận callback và thực hiện công việc bất đồng bộ
+// function fetchData(callback) {
+//   setTimeout(function() {
+//     console.log('Data is fetched!');
+//     callback('Data');
+//   }, 1000);
+// }
+
+// // Hàm callback
+// function processData(data) {
+//   console.log('Processing data:', data);
+// }
+
+// // Gọi hàm fetchData với hàm processData làm callback
+// fetchData(processData);
+// Trong ví dụ trên, fetchData là một hàm chấp nhận một callback và gọi nó sau khi hoàn thành công việc bất đồng bộ. processData là một hàm callback được truyền vào fetchData và sẽ được gọi khi dữ liệu được fetch xong.
+
+// let courses =[
+//   'Javascript',
+//   'PHP'
+// ];
+// courses.length = 10;
+// console.log(courses);
+// for(let i = 0; i < courses.length; i++){
+//   console.log(courses[i]);
+// }
+var courses = new Array(10);
+courses.push('javascript', 'PHP');
+console.log(courses);
+for(let index in courses ){
+  console.log(index);
+}
+
+
+
